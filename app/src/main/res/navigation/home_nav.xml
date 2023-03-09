@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_serve_to_home2"
             app:destination="@id/home2" />
+        <action
+            android:id="@+id/action_serve_to_account"
+            app:destination="@id/account" />
     </fragment>
     <fragment
         android:id="@+id/hisOrder"
