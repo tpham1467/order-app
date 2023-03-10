@@ -5,18 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/Page_SignUp"
+    android:background="@drawable/pic_login"
     tools:context=".SignUp">
 
-    <ImageView
-        android:id="@+id/imageView_Signin"
-        android:layout_width="463dp"
-        android:layout_height="890dp"
-        android:layout_marginTop="2dp"
-        android:background="@drawable/pic_login"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
 
     <LinearLayout
         android:id="@+id/linearLayout8"
@@ -95,17 +87,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginBottom="32dp"
         android:fontFamily="sans-serif-black"
         android:text="Sign Up"
         android:textColor="@color/black"
         android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView_Signin" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
+        android:id="@+id/linearLayout10"
         android:layout_width="410dp"
         android:layout_height="66dp"
         android:orientation="horizontal"
@@ -195,7 +188,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout8" />
 
     <TextView
-        android:id="@+id/textView_Forgotpass"
+        android:id="@+id/textView_Forgotpass_snup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -220,7 +213,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.471"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_Forgotpass" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_Forgotpass_snup" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="143dp"

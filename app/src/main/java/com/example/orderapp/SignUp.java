@@ -22,6 +22,16 @@ public class SignUp extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        TextView button_txt_Forgotpass_snup = findViewById(R.id.textView_Forgotpass_snup);
+        button_txt_Forgotpass_snup .setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(SignUp.this, CreateAccount.class);
+                startActivity(intent2);
+            }
+        });
+
     }
 
 }

@@ -4,17 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/pic_login"
     tools:context=".Signin">
-    <ImageView
-        android:id="@+id/imageView_Signin"
-        android:layout_width="463dp"
-        android:layout_height="890dp"
-        android:layout_marginTop="2dp"
-        android:background="@drawable/pic_login"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_Title"
@@ -194,7 +185,7 @@
         app:layout_constraintVertical_bias="0.671" />
 
     <TextView
-        android:id="@+id/textView_Forgotpass"
+        android:id="@+id/textView_Forgotpass_snin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
@@ -217,7 +208,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.471"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_Forgotpass" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_Forgotpass_snin" />
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -295,7 +286,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="178dp"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="11dp"
         android:fontFamily="sans-serif-black"
         android:text="Sign Up"
         android:textColor="#f36155"
@@ -309,16 +300,15 @@
         android:id="@+id/textView22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="72dp"
         android:fontFamily="sans-serif-black"
         android:text="Don't have an account?"
         android:textColor="#a9acad"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.401"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_Continue" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

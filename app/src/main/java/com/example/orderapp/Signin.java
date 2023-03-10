@@ -25,14 +25,25 @@ public class Signin extends AppCompatActivity {
             }
         });
 
-
-        TextView button_txt_SignUp = findViewById(R.id.tv_SignUp);
-        button_txt_SignUp.setOnClickListener(new View.OnClickListener() {
+        TextView button_txt_snup = findViewById(R.id.tv_SignUp);
+        button_txt_snup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent2 = new Intent(Signin.this, SignUp.class);
                 startActivity(intent2);
             }
         });
+
+
+        TextView button_txt_Forgotpass_snin = findViewById(R.id.textView_Forgotpass_snin);
+        button_txt_Forgotpass_snin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent3 = new Intent(Signin.this, CreateAccount.class);
+                startActivity(intent3);
+            }
+        });
+
+
     }
 }
