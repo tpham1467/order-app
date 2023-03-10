@@ -114,11 +114,12 @@
 
     <EditText
         android:id="@+id/edittext"
-        android:layout_width="418dp"
-        android:layout_height="49dp"
+        android:layout_width="388dp"
+        android:layout_height="55dp"
         android:background="@drawable/edittext_border"
         android:hint="Nguyễn Văn A"
         android:padding="10dp"
+        android:textColorHint="#454749"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.301"
@@ -128,11 +129,12 @@
 
     <EditText
         android:id="@+id/edittext2"
-        android:layout_width="418dp"
-        android:layout_height="49dp"
+        android:layout_width="388dp"
+        android:layout_height="55dp"
         android:background="@drawable/edittext_border"
         android:hint="00/00/0000"
         android:padding="10dp"
+        android:textColorHint="#454749"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.301"
@@ -142,11 +144,12 @@
 
     <EditText
         android:id="@+id/edittext3"
-        android:layout_width="418dp"
-        android:layout_height="49dp"
+        android:layout_width="388dp"
+        android:layout_height="55dp"
         android:background="@drawable/edittext_border"
         android:hint="123456789"
         android:padding="10dp"
+        android:textColorHint="#454749"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.301"
@@ -156,11 +159,12 @@
 
     <EditText
         android:id="@+id/edittext5"
-        android:layout_width="418dp"
-        android:layout_height="49dp"
+        android:layout_width="388dp"
+        android:layout_height="55dp"
         android:background="@drawable/edittext_border"
         android:hint="abcdxyz@gmail.com"
         android:padding="10dp"
+        android:textColorHint="#454749"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.301"
@@ -170,11 +174,12 @@
 
     <EditText
         android:id="@+id/edittext4"
-        android:layout_width="418dp"
-        android:layout_height="49dp"
+        android:layout_width="388dp"
+        android:layout_height="55dp"
         android:background="@drawable/edittext_border"
         android:hint="0934546340"
         android:padding="10dp"
+        android:textColorHint="#454749"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.301"
