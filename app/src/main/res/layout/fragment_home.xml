@@ -99,7 +99,7 @@ tools:context=".view.home"
     <ImageButton
         android:id="@+id/imageButton5"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_weight="1"
         android:background="#F8E3D7"
         app:srcCompat="@drawable/ic_baseline_navigate_next_24" />
@@ -171,22 +171,20 @@ tools:context=".view.home"
             <ImageView
                 android:id="@+id/imageView17"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="31dp"
                 android:layout_weight="1"
-                android:background="#BCB7B7"
                 android:paddingTop="5dp"
                 app:srcCompat="@drawable/ic_baseline_home_24" />
 
             <TextView
-                android:id="@+id/textView18"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="32dp"
                 android:layout_weight="1"
-                android:background="#BCB7B7"
+                android:background="@drawable/border_bottom"
                 android:fontFamily="@font/abril_fatface"
                 android:gravity="center"
                 android:text="Home"
-                android:textColor="@color/black"
+                android:textColor="#ff3131"
                 android:textSize="14sp" />
 
         </LinearLayout>
@@ -246,6 +244,7 @@ tools:context=".view.home"
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/nav_account"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"

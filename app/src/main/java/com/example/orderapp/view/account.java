@@ -1,4 +1,4 @@
-package com.example.orderapp;
+package com.example.orderapp.view;
 
 import android.os.Bundle;
 
@@ -8,12 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.orderapp.R;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link hisOrder#newInstance} factory method to
+ * Use the {@link account#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class hisOrder extends Fragment {
+public class account extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +26,7 @@ public class hisOrder extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public hisOrder() {
+    public account() {
         // Required empty public constructor
     }
 
@@ -34,11 +36,11 @@ public class hisOrder extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment hisOrder.
+     * @return A new instance of fragment account.
      */
     // TODO: Rename and change types and number of parameters
-    public static hisOrder newInstance(String param1, String param2) {
-        hisOrder fragment = new hisOrder();
+    public static account newInstance(String param1, String param2) {
+        account fragment = new account();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +61,6 @@ public class hisOrder extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_his_order, container, false);
+        return inflater.inflate(R.layout.fragment_account, container, false);
     }
 }

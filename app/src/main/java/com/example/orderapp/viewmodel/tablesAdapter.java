@@ -1,17 +1,21 @@
-package com.example.orderapp;
+package com.example.orderapp.viewmodel;
 
 
 import android.content.Context;
-import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.orderapp.model.foodItem;
+import com.example.orderapp.R;
 import com.example.orderapp.model.tableItem;
 
 import java.util.List;
@@ -52,6 +56,15 @@ public class tablesAdapter extends RecyclerView.Adapter<tablesAdapter.ViewHolder
         holder.tvNumServed.setText(Integer.toString(tables.getNumServed()));
         holder.tvTotalServe.setText(Integer.toString(tables.getTotalServe()));
         holder.tvCostFoods.setText(tables.getTotalCostFood().toString());
+
+        holder.llTableItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bundle bundle = new Bundle();
+                bundle.putString("nameTable", tables.getNameTable().toString());
+                Navigation.findNavController(view).navigate(R.id.action_serve_to_detailsOrder2, bundle);
+            }
+        });
     }
 
     @Override
@@ -68,6 +81,7 @@ public class tablesAdapter extends RecyclerView.Adapter<tablesAdapter.ViewHolder
         private TextView tvNumServed;
         private TextView tvTotalServe;
         private TextView tvCostFoods;
+        private LinearLayout llTableItem;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -77,6 +91,7 @@ public class tablesAdapter extends RecyclerView.Adapter<tablesAdapter.ViewHolder
             tvNumServed = itemView.findViewById(R.id.tv_numserved);
             tvTotalServe = itemView.findViewById(R.id.tv_totalserve);
             tvCostFoods = itemView.findViewById(R.id.tv_totalcostfood);
+            llTableItem = itemView.findViewById(R.id.ll_tableitem);
         }
     }
 

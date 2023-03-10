@@ -1,0 +1,76 @@
+package com.example.orderapp.viewmodel;
+
+import android.content.Context;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.navigation.Navigation;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.orderapp.R;
+import com.example.orderapp.model.foodItem;
+import com.example.orderapp.model.hisOrderedItem;
+import com.example.orderapp.model.tableItem;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+
+public class customerOrderedAdapter extends RecyclerView.Adapter<customerOrderedAdapter.ViewHolder> {
+
+    private Context context;
+    List<hisOrderedItem> hisOrdereds;
+
+    public customerOrderedAdapter(Context context) {
+        this.context = context;
+    }
+
+    public void setData(List<hisOrderedItem> items){
+        this.hisOrdereds = items;
+        notifyDataSetChanged();
+    }
+
+    @NonNull
+    @Override
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_his_ordered,parent,false);
+
+        return new ViewHolder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+
+        hisOrderedItem item_ordered = hisOrdereds.get(position);
+        holder.tvNameCus.setText((String) item_ordered.getNameCus());
+        holder.tvTotalPaid.setText((String) item_ordered.getTotalPaid());
+        holder.dateOrdered.setText((String) item_ordered.getDateOrdered());
+    }
+
+    @Override
+    public int getItemCount() {
+        if(hisOrdereds != null){
+            return hisOrdereds.size();
+        }
+        return 0;
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder{
+
+        private TextView tvNameCus;
+        private TextView tvTotalPaid;
+        private TextView dateOrdered;
+
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+            tvNameCus = itemView.findViewById(R.id.tv_namecus);
+            tvTotalPaid = itemView.findViewById(R.id.tv_totalPaid);
+            dateOrdered = itemView.findViewById(R.id.tv_timeOrdered);
+        }
+    }
+}
