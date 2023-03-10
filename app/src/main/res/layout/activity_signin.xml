@@ -279,7 +279,7 @@
             android:layout_width="49dp"
             android:layout_height="53dp"
             android:layout_marginEnd="88dp"
-            android:src="@drawable/Icon_gg"
+            android:src="@drawable/google"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />

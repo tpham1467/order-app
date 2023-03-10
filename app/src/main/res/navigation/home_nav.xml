@@ -43,7 +43,7 @@
     </fragment>
     <fragment
         android:id="@+id/account"
-        android:name="com.example.orderapp.account"
+        android:name="com.example.orderapp.view.account"
         android:label="fragment_account"
         tools:layout="@layout/fragment_account" >
         <action
