@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/Page_SignUp"
     android:background="@drawable/pic_login"
-    tools:context=".SignUp">
+    tools:context=".view.SignUp">
 
 
 
@@ -290,7 +290,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="76dp"
         android:fontFamily="sans-serif-black"
         android:text="Already have an account?"
         android:textColor="#a9acad"
@@ -305,7 +305,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="178dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="15dp"
         android:fontFamily="sans-serif-black"
         android:text="Sign in"
         android:textColor="#f36155"

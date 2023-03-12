@@ -7,9 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.orderapp.MainActivity;
 import com.example.orderapp.R;
-import com.example.orderapp.Signin;
 
 public class FirstActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.example.orderapp;
+package com.example.orderapp.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,7 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.orderapp.view.FirstActivity;
+import com.example.orderapp.CreateAccount;
+import com.example.orderapp.MainActivity;
+import com.example.orderapp.R;
 
 public class Signin extends AppCompatActivity {
 

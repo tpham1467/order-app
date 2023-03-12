@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/pic_login"
-    tools:context=".Signin">
+    tools:context=".view.Signin">
 
     <TextView
         android:id="@+id/tv_Title"
