@@ -27,7 +27,7 @@ import java.util.List;
 public class Serve extends Fragment {
     private RecyclerView recyclerAllTable;
     private tablesAdapter tablesAdap;
-    private LinearLayout serHome;
+    private LinearLayout serHome,navAccount;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -61,6 +61,14 @@ public class Serve extends Fragment {
             @Override
             public void onClick(View view) {
                 Navigation.findNavController(view).navigate(R.id.home_nav, savedInstanceState);
+            }
+        });
+
+        navAccount = view.findViewById(R.id.nav_account);
+        navAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.account, savedInstanceState);
             }
         });
 

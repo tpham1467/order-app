@@ -5,87 +5,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F8E3D7"
-    tools:context=".view.account">
-
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="184dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="120dp"
-        android:layout_weight="0"
-        android:fontFamily="sans-serif-black"
-        android:gravity="center"
-        android:text="Viên Nguyễn"
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.978"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/my_image_view"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="72dp"
-        android:src="@drawable/mypic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/iconmenus" />
-
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="60dp"
-        android:layout_height="33dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginBottom="704dp"
-        android:text="Staff"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+    tools:context=".view.account"
+    >
 
     <LinearLayout
         android:id="@+id/linearLayout7"
         android:layout_width="414dp"
         android:layout_height="580dp"
-        android:background="#ffffff"
+        android:layout_marginTop="60dp"
+        android:background="#F8E3D7"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.595">
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <LinearLayout
             android:layout_width="417dp"
             android:layout_height="149dp"
             android:orientation="horizontal">
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
+
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/my_image_view2"
-                    android:layout_width="130dp"
-                    android:layout_height="135dp"
+                    android:layout_width="123dp"
+                    android:layout_height="122dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
                     android:src="@drawable/mypic"
-                    tools:ignore="MissingConstraints"
-                    tools:layout_editor_absoluteX="3dp"
-                    tools:layout_editor_absoluteY="8dp" />
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0"
+                    tools:ignore="MissingConstraints" />
 
                 <ImageView
                     android:id="@+id/imageView_CamChangePic"
@@ -105,7 +60,7 @@
                 android:layout_marginTop="50dp"
                 android:fontFamily="sans-serif-black"
                 android:text="My Profile"
-                android:textColor="@color/black"
+                android:textColor="#000"
                 android:textSize="40sp" />
 
 
@@ -143,9 +98,12 @@
                     android:layout_width="217dp"
                     android:layout_height="51dp"
                     android:background="@drawable/edittext_border_pink"
-                    android:hint="102200200"
+                    android:enabled="false"
+                    android:inputType="none"
                     android:minWidth="200dp"
                     android:minHeight="50dp"
+                    android:text="102200200"
+                    android:textColor="#000"
                     android:textSize="15sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -172,6 +130,7 @@
             android:layout_width="match_parent"
             android:layout_height="72dp"
             android:orientation="horizontal">
+
             <TextView
                 android:id="@+id/txt_Name"
                 android:layout_width="wrap_content"
@@ -199,9 +158,13 @@
                     android:layout_width="217dp"
                     android:layout_height="51dp"
                     android:background="#f5c3c0"
+                    android:enabled="false"
                     android:hint="Nguyễn Văn Viên"
+                    android:inputType="none"
                     android:minWidth="200dp"
                     android:minHeight="50dp"
+                    android:text="Nguyễn Văn Viên"
+                    android:textColor="#000"
                     android:textSize="15sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -227,6 +190,7 @@
             android:layout_width="match_parent"
             android:layout_height="72dp"
             android:orientation="horizontal">
+
             <TextView
                 android:id="@+id/txt_DateBirth"
                 android:layout_width="wrap_content"
@@ -254,9 +218,12 @@
                     android:layout_width="217dp"
                     android:layout_height="51dp"
                     android:background="#f5c3c0"
-                    android:hint="28/02/2002"
+                    android:enabled="false"
+                    android:inputType="none"
                     android:minWidth="200dp"
                     android:minHeight="50dp"
+                    android:text="28/02/2002"
+                    android:textColor="#000"
                     android:textSize="15sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -282,6 +249,7 @@
             android:layout_width="match_parent"
             android:layout_height="72dp"
             android:orientation="horizontal">
+
             <TextView
                 android:id="@+id/txt_Phone"
                 android:layout_width="wrap_content"
@@ -309,9 +277,12 @@
                     android:layout_width="217dp"
                     android:layout_height="51dp"
                     android:background="#f5c3c0"
-                    android:hint="0941296714"
+                    android:enabled="false"
+                    android:inputType="none"
                     android:minWidth="200dp"
                     android:minHeight="50dp"
+                    android:text="0941296714"
+                    android:textColor="#000"
                     android:textSize="15sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -337,6 +308,7 @@
             android:layout_width="match_parent"
             android:layout_height="72dp"
             android:orientation="horizontal">
+
             <TextView
                 android:id="@+id/txt_Mail"
                 android:layout_width="wrap_content"
@@ -364,9 +336,12 @@
                     android:layout_width="217dp"
                     android:layout_height="51dp"
                     android:background="#f5c3c0"
-                    android:hint="viennguyen.280202@gmail.com"
+                    android:enabled="false"
+                    android:inputType="none"
                     android:minWidth="200dp"
                     android:minHeight="50dp"
+                    android:text="viennguyen.280202@gmail.com"
+                    android:textColor="#000"
                     android:textSize="15sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -391,6 +366,7 @@
             android:layout_width="match_parent"
             android:layout_height="72dp"
             android:orientation="horizontal">
+
             <TextView
                 android:id="@+id/txt_IDCard"
                 android:layout_width="wrap_content"
@@ -418,9 +394,12 @@
                     android:layout_width="217dp"
                     android:layout_height="51dp"
                     android:background="#f5c3c0"
-                    android:hint="viennguyen.280202@gmail.com"
+                    android:enabled="false"
+                    android:inputType="none"
                     android:minWidth="200dp"
                     android:minHeight="50dp"
+                    android:text="206214158"
+                    android:textColor="#000"
                     android:textSize="15sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -537,6 +516,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/nav_account"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"

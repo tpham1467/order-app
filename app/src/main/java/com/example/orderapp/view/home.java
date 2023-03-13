@@ -26,7 +26,7 @@ public class home extends Fragment {
     private RecyclerView recyclerPopular;
     private RecyclerView recyclerFoods;
     private itemsFoodAdapter itemsAdapter;
-    private LinearLayout serNav;
+    private LinearLayout navServe,navAccount;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -62,11 +62,19 @@ public class home extends Fragment {
 
         recyclerFoods.setAdapter(itemsAdapter);
 
-        serNav = view.findViewById(R.id.nav_serve);
-        serNav.setOnClickListener(new View.OnClickListener() {
+        navServe = view.findViewById(R.id.nav_serve);
+        navServe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Navigation.findNavController(view).navigate(R.id.serve, savedInstanceState);
+            }
+        });
+
+        navAccount = view.findViewById(R.id.nav_account);
+        navAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.account, savedInstanceState);
             }
         });
 
