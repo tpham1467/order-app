@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 
-import com.example.orderapp.CreateAccount;
+import com.example.orderapp.view.CreateAccount;
 import com.example.orderapp.R;
 
 public class SignUp extends AppCompatActivity {
@@ -26,15 +26,25 @@ public class SignUp extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Button button = findViewById(R.id.btn_SignUp);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SignUp.this, CreateAccount.class);
+                startActivity(intent);
+            }
+        });
 
         TextView button_txt_Forgotpass_snup = findViewById(R.id.textView_Forgotpass_snup);
         button_txt_Forgotpass_snup .setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent2 = new Intent(SignUp.this, CreateAccount.class);
+                Intent intent2 = new Intent(SignUp.this, Reset_pass.class);
                 startActivity(intent2);
             }
         });
+
+
 
     }
 

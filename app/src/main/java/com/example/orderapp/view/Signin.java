@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.orderapp.CreateAccount;
+import com.example.orderapp.view.CreateAccount;
 import com.example.orderapp.MainActivity;
 import com.example.orderapp.R;
 
@@ -41,7 +41,7 @@ public class Signin extends AppCompatActivity {
         button_txt_Forgotpass_snin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent3 = new Intent(Signin.this, CreateAccount.class);
+                Intent intent3 = new Intent(Signin.this, Reset_pass.class);
                 startActivity(intent3);
             }
         });
