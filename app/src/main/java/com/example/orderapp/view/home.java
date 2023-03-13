@@ -1,7 +1,6 @@
 package com.example.orderapp.view;
 
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -9,12 +8,10 @@ import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-
 import com.example.orderapp.R;
 import com.example.orderapp.viewmodel.itemsFoodAdapter;
 import com.example.orderapp.model.foodItem;
@@ -30,6 +27,7 @@ public class home extends Fragment {
     private LinearLayout navHis;
     private LinearLayout navAcc;
     private LinearLayout navHome;
+    private LinearLayout navAccount;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -67,7 +65,6 @@ public class home extends Fragment {
 
         navSer = view.findViewById(R.id.nav_serve);
         navHis = view.findViewById(R.id.nav_his);
-//        navAcc = view.findViewById(R.id.nav_account);
         navHome = view.findViewById(R.id.nav_home);
         navSer.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,13 +78,13 @@ public class home extends Fragment {
                 Navigation.findNavController(view).navigate(R.id.hisOrder, savedInstanceState);
             }
         });
-//        navAcc.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Navigation.findNavController(view).navigate(R.id.nav_account, savedInstanceState);
-//            }
-//        });
-
+        navAccount = view.findViewById(R.id.nav_account);
+        navAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.account, savedInstanceState);
+            }
+        });
     }
 
     private List<foodItem> getListItem(){

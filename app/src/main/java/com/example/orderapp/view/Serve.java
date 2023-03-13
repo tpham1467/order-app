@@ -27,6 +27,7 @@ public class Serve extends Fragment {
     private LinearLayout navHome;
     private LinearLayout navHis;
     private LinearLayout navAcc;
+    private LinearLayout navAccount;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -54,7 +55,6 @@ public class Serve extends Fragment {
         recyclerAllTable.setLayoutManager(linearLayoutManager);
         tablesAdap.setData(getListItem());
         recyclerAllTable.setAdapter(tablesAdap);
-
         navHis = view.findViewById(R.id.nav_his);
 //        navAcc = view.findViewById(R.id.nav_account);
         navHome = view.findViewById(R.id.nav_home);
@@ -64,34 +64,35 @@ public class Serve extends Fragment {
                 Navigation.findNavController(view).navigate(R.id.hisOrder, savedInstanceState);
             }
         });
-//        navAcc.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Navigation.findNavController(view).navigate(R.id.action_home2_to_account, savedInstanceState);
-//            }
-//        });
         navHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Navigation.findNavController(view).navigate(R.id.home_nav, savedInstanceState);
             }
         });
-
+        navAccount = view.findViewById(R.id.nav_account);
+        navAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.account, savedInstanceState);
+            }
+        });
     }
 
-    private List<tableItem> getListItem(){
-        List<tableItem> list = new ArrayList<>();
-        list.add(new tableItem("Table 1",true,4,5,"145,95"));
-        list.add(new tableItem("Table 2",false,2,5,"145,95"));
-        list.add(new tableItem("Table 3",true,4,5,"145,95"));
-        list.add(new tableItem("Table 4",false,4,5,"145,95"));
-        list.add(new tableItem("Table 5",false,4,5,"145,95"));
-        list.add(new tableItem("Table 6",true,4,5,"145,95"));
-        list.add(new tableItem("Table 7",false,4,5,"145,95"));
-        list.add(new tableItem("Table 8",true,4,5,"145,95"));
-        list.add(new tableItem("Table 9",false,4,5,"145,95"));
-        list.add(new tableItem("Table 10",true,4,5,"145,95"));
-        list.add(new tableItem("Table 11",true,4,5,"145,95"));
-        return list;
-    }
+            private List<tableItem> getListItem() {
+                List<tableItem> list = new ArrayList<>();
+                list.add(new tableItem("Table 1", true, 4, 5, "145,95"));
+                list.add(new tableItem("Table 2", false, 2, 5, "145,95"));
+                list.add(new tableItem("Table 3", true, 4, 5, "145,95"));
+                list.add(new tableItem("Table 4", false, 4, 5, "145,95"));
+                list.add(new tableItem("Table 5", false, 4, 5, "145,95"));
+                list.add(new tableItem("Table 6", true, 4, 5, "145,95"));
+                list.add(new tableItem("Table 7", false, 4, 5, "145,95"));
+                list.add(new tableItem("Table 8", true, 4, 5, "145,95"));
+                list.add(new tableItem("Table 9", false, 4, 5, "145,95"));
+                list.add(new tableItem("Table 10", true, 4, 5, "145,95"));
+                list.add(new tableItem("Table 11", true, 4, 5, "145,95"));
+                return list;
+            }
+
 }

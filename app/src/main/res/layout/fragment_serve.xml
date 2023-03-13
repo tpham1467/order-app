@@ -178,6 +178,4 @@
                 android:textSize="14sp" />
         </LinearLayout>
     </LinearLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
