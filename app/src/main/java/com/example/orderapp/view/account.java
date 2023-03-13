@@ -1,6 +1,7 @@
 package com.example.orderapp.view;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -11,7 +12,10 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.orderapp.R;
 public class account extends Fragment {
@@ -71,6 +75,19 @@ public class account extends Fragment {
                         Navigation.findNavController(view).navigate(R.id.home_nav, savedInstanceState);
                     }
                 });
+
+        ImageView editName = view.findViewById(R.id.pen_editName);
+        EditText editText_Name = view.findViewById(R.id.edit_Name);
+
+        editName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                editText_Name.setEnabled(true);
+//                String text = editText_Name.getText().toString();
+//                editText_Name.setEnabled(false);
+
+            }
+        });
 
     }
 

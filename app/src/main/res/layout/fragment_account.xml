@@ -99,7 +99,6 @@
                     android:layout_height="51dp"
                     android:background="@drawable/edittext_border_pink"
                     android:enabled="false"
-                    android:inputType="none"
                     android:minWidth="200dp"
                     android:minHeight="50dp"
                     android:text="102200200"
@@ -160,7 +159,6 @@
                     android:background="#f5c3c0"
                     android:enabled="false"
                     android:hint="Nguyễn Văn Viên"
-                    android:inputType="none"
                     android:minWidth="200dp"
                     android:minHeight="50dp"
                     android:text="Nguyễn Văn Viên"
@@ -174,7 +172,7 @@
                     app:layout_constraintVertical_bias="0.538" />
 
                 <ImageView
-                    android:id="@+id/imageView_pen1"
+                    android:id="@+id/pen_editName"
                     android:layout_width="33dp"
                     android:layout_height="32dp"
                     android:layout_marginEnd="4dp"
@@ -219,7 +217,6 @@
                     android:layout_height="51dp"
                     android:background="#f5c3c0"
                     android:enabled="false"
-                    android:inputType="none"
                     android:minWidth="200dp"
                     android:minHeight="50dp"
                     android:text="28/02/2002"
@@ -233,7 +230,7 @@
                     app:layout_constraintVertical_bias="0.538" />
 
                 <ImageView
-                    android:id="@+id/imageView_pen2"
+                    android:id="@+id/pen_editDateBirth"
                     android:layout_width="33dp"
                     android:layout_height="32dp"
                     android:layout_marginEnd="4dp"
@@ -278,7 +275,6 @@
                     android:layout_height="51dp"
                     android:background="#f5c3c0"
                     android:enabled="false"
-                    android:inputType="none"
                     android:minWidth="200dp"
                     android:minHeight="50dp"
                     android:text="0941296714"
@@ -292,7 +288,7 @@
                     app:layout_constraintVertical_bias="0.538" />
 
                 <ImageView
-                    android:id="@+id/imageView_pen3"
+                    android:id="@+id/pen_editPhoneNumber"
                     android:layout_width="33dp"
                     android:layout_height="32dp"
                     android:layout_marginEnd="4dp"
@@ -337,7 +333,6 @@
                     android:layout_height="51dp"
                     android:background="#f5c3c0"
                     android:enabled="false"
-                    android:inputType="none"
                     android:minWidth="200dp"
                     android:minHeight="50dp"
                     android:text="viennguyen.280202@gmail.com"
@@ -351,7 +346,7 @@
                     app:layout_constraintVertical_bias="0.538" />
 
                 <ImageView
-                    android:id="@+id/imageView_pen4"
+                    android:id="@+id/pen_editEmail"
                     android:layout_width="33dp"
                     android:layout_height="32dp"
                     android:layout_marginEnd="4dp"
@@ -395,7 +390,6 @@
                     android:layout_height="51dp"
                     android:background="#f5c3c0"
                     android:enabled="false"
-                    android:inputType="none"
                     android:minWidth="200dp"
                     android:minHeight="50dp"
                     android:text="206214158"
@@ -409,7 +403,7 @@
                     app:layout_constraintVertical_bias="0.538" />
 
                 <ImageView
-                    android:id="@+id/imageView_pen5"
+                    android:id="@+id/pen_editIDCard"
                     android:layout_width="33dp"
                     android:layout_height="32dp"
                     android:layout_marginEnd="4dp"
