@@ -26,7 +26,6 @@ public class Serve extends Fragment {
     private tablesAdapter tablesAdap;
     private LinearLayout navHome;
     private LinearLayout navHis;
-    private LinearLayout navAcc;
     private LinearLayout navAccount;
 
     @Override
@@ -56,7 +55,6 @@ public class Serve extends Fragment {
         tablesAdap.setData(getListItem());
         recyclerAllTable.setAdapter(tablesAdap);
         navHis = view.findViewById(R.id.nav_his);
-//        navAcc = view.findViewById(R.id.nav_account);
         navHome = view.findViewById(R.id.nav_home);
         navHis.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,13 +68,13 @@ public class Serve extends Fragment {
                 Navigation.findNavController(view).navigate(R.id.home_nav, savedInstanceState);
             }
         });
-        navAccount = view.findViewById(R.id.nav_account);
-        navAccount.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.account, savedInstanceState);
-            }
-        });
+//        navAccount = view.findViewById(R.id.nav_account);
+//        navAccount.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Navigation.findNavController(view).navigate(R.id.account, savedInstanceState);
+//            }
+//        });
     }
 
             private List<tableItem> getListItem() {
