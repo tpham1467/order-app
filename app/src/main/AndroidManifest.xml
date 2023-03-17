@@ -13,9 +13,13 @@
         android:theme="@style/Theme.OrderApp"
         tools:targetApi="31">
         <activity
-            android:name=".view.Reset_pass"
+            android:name=".view.Confirm_reset_pass"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity
+            android:name=".view.Reset_pass"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".view.CreateAccount"
             android:exported="false"
@@ -35,8 +39,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
-            >
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -44,8 +47,7 @@
         <activity
             android:name=".FirstActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
-            >
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
