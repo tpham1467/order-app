@@ -16,29 +16,33 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.orderapp.R;
-import com.example.orderapp.model.foodItem;
-import com.example.orderapp.model.hisOrderedItem;
 import com.example.orderapp.viewmodel.customerOrderedAdapter;
 import com.example.orderapp.viewmodel.foodsOrderAdapter;
+import com.example.orderapp.viewmodel.itemsFoodAdapter;
+import com.example.orderapp.model.foodItem;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-public class hisOrder extends Fragment {
-    private RecyclerView recyclerHisOrder;
-    private customerOrderedAdapter cusOrderedAdapter;
+public class HisDetailOrdered extends Fragment {
+
+    private RecyclerView recyclerListFoods;
+    private foodsOrderAdapter foodsOrAdapter;
     private LinearLayout navHome;
+    private LinearLayout navHis;
+    private LinearLayout navAcc;
     private LinearLayout navSer;
     private LinearLayout navAccount;
-    private LinearLayout navAcc;
-    private String nameTable;
+    private String nameCustom;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         setHasOptionsMenu(true);
         super.onCreate(savedInstanceState);
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            nameCustom = bundle.getString("nameCustom");
+        }
 
     }
 
@@ -46,19 +50,22 @@ public class hisOrder extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_his_order, container, false);
+        return inflater.inflate(R.layout.fragment_his_detail_ordered, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        recyclerHisOrder = view.findViewById(R.id.rv_allHisOrderedTable);
-        cusOrderedAdapter = new customerOrderedAdapter(view.getContext());
+        recyclerListFoods = view.findViewById(R.id.rv_his_detail_ordered);
+        foodsOrAdapter = new foodsOrderAdapter(view.getContext());
 
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(view.getContext(),recyclerHisOrder.VERTICAL,false);
-        recyclerHisOrder.setLayoutManager(linearLayoutManager);
-        cusOrderedAdapter.setData(getListItem());
-        recyclerHisOrder.setAdapter(cusOrderedAdapter);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(view.getContext(),recyclerListFoods.VERTICAL,false);
+        recyclerListFoods.setLayoutManager(linearLayoutManager);
+        foodsOrAdapter.setData(getListItem());
+        recyclerListFoods.setAdapter(foodsOrAdapter);
+
+        TextView tvNameTable = view.findViewById(R.id.textView1);
+        tvNameTable.setText(nameCustom);
 
         navHome = view.findViewById(R.id.nav_home);
         navSer = view.findViewById(R.id.nav_serve);
@@ -77,7 +84,6 @@ public class hisOrder extends Fragment {
                 Navigation.findNavController(view).navigate(R.id.serve, savedInstanceState);
             }
         });
-
         navAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -90,16 +96,20 @@ public class hisOrder extends Fragment {
 //                Navigation.findNavController(view).navigate(R.id.nav_account, savedInstanceState);
 //            }
 //        });
+
     }
 
-    private List<hisOrderedItem> getListItem(){
-
-        List<hisOrderedItem> list = new ArrayList<>();
-        list.add(new hisOrderedItem("Selina Nguyennn","250,9","28/02/2023"));
-        list.add(new hisOrderedItem("Selina Nguyennn","250,9","28/02/2023"));
-        list.add(new hisOrderedItem("Selina Nguyennn","250,9","28/02/2023"));
-        list.add(new hisOrderedItem("Selina Nguyennn","250,9","28/02/2023"));
-        list.add(new hisOrderedItem("Selina Nguyennn","250,9","28/02/2023"));
+    private List<foodItem> getListItem(){
+        List<foodItem> list = new ArrayList<>();
+        list.add(new foodItem("Hamperger","15.93","Carrot, rise, broccoli, paprica",true));
+        list.add(new foodItem("Hamperger","15.93","Carrot, rise, broccoli, paprica",false));
+        list.add(new foodItem("Hamperger","15.93","Carrot, rise, broccoli, paprica",true));
+        list.add(new foodItem("Hamperger","15.93","Carrot, rise, broccoli, paprica",false));
+        list.add(new foodItem("Hamperger","15.93","Carrot, rise, broccoli, paprica",true));
+        list.add(new foodItem("Hamperger","15.93","Carrot, rise, broccoli, paprica",true));
+        list.add(new foodItem("Hamperger","15.93","Carrot, rise, broccoli, paprica",true));
+        list.add(new foodItem("Hamperger","15.93","Carrot, rise, broccoli, paprica",true));
+        list.add(new foodItem("Hamperger","15.93","Carrot, rise, broccoli, paprica",true));
         return list;
     }
 }

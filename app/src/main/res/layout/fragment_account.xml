@@ -12,7 +12,7 @@
         android:id="@+id/linearLayout7"
         android:layout_width="414dp"
         android:layout_height="580dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="30dp"
         android:background="#F8E3D7"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,6 +26,7 @@
             android:orientation="horizontal">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
@@ -156,7 +157,7 @@
                     android:id="@+id/edit_Name"
                     android:layout_width="217dp"
                     android:layout_height="51dp"
-                    android:background="#f5c3c0"
+                    android:background="@drawable/edittext_border_pink"
                     android:enabled="false"
                     android:hint="Nguyễn Văn Viên"
                     android:minWidth="200dp"
@@ -411,6 +412,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
@@ -465,7 +467,7 @@
             <ImageView
                 android:id="@+id/imageView18"
                 android:layout_width="match_parent"
-                android:layout_height="19dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingTop="5dp"
                 app:srcCompat="@drawable/ic_baseline_local_grocery_store_24" />
@@ -492,7 +494,8 @@
             <ImageView
                 android:id="@+id/imageView19"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
+
                 android:layout_weight="1"
                 android:paddingTop="5dp"
                 app:srcCompat="@drawable/ic_baseline_restore_24" />
@@ -521,16 +524,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#BCB7B7"
+                android:background="#fff"
                 android:paddingTop="5dp"
                 app:srcCompat="@drawable/baseline_account_circle_24" />
 
             <TextView
                 android:id="@+id/textView21"
-                android:layout_width="match_parent"
+                android:layout_width="91dp"
                 android:layout_height="wrap_content"
+                android:background="@drawable/border_bottom"
                 android:layout_weight="1"
-                android:background="#BCB7B7"
                 android:fontFamily="@font/abril_fatface"
                 android:gravity="center"
                 android:text="Account"
@@ -538,6 +541,43 @@
                 android:textSize="14sp" />
         </LinearLayout>
     </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="122dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_border_pink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.946"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="sans-serif-black"
+            android:text="SAVE"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.384" />
+
+        <ImageView
+            android:id="@+id/image_save"
+            android:layout_width="33dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/baseline_save_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.19" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

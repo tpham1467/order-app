@@ -50,6 +50,14 @@ public class customerOrderedAdapter extends RecyclerView.Adapter<customerOrdered
         holder.tvNameCus.setText((String) item_ordered.getNameCus());
         holder.tvTotalPaid.setText((String) item_ordered.getTotalPaid());
         holder.dateOrdered.setText((String) item_ordered.getDateOrdered());
+        holder.llFoodItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bundle bundle = new Bundle();
+                bundle.putString("nameCustom", item_ordered.getNameCus().toString()+"'s");
+                Navigation.findNavController(view).navigate(R.id.action_hisOrder_to_hisDetailOrdered, bundle);
+            }
+        });
     }
 
     @Override
@@ -65,12 +73,14 @@ public class customerOrderedAdapter extends RecyclerView.Adapter<customerOrdered
         private TextView tvNameCus;
         private TextView tvTotalPaid;
         private TextView dateOrdered;
+        private LinearLayout llFoodItem;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tvNameCus = itemView.findViewById(R.id.tv_namecus);
             tvTotalPaid = itemView.findViewById(R.id.tv_totalPaid);
             dateOrdered = itemView.findViewById(R.id.tv_timeOrdered);
+            llFoodItem = itemView.findViewById(R.id.ll_tableitem);
         }
     }
 }

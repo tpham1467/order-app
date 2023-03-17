@@ -40,6 +40,9 @@
         <action
             android:id="@+id/action_hisOrder_to_home2"
             app:destination="@id/homenav" />
+        <action
+            android:id="@+id/action_hisOrder_to_hisDetailOrdered"
+            app:destination="@id/hisDetailOrdered" />
     </fragment>
     <fragment
         android:id="@+id/account"
@@ -59,4 +62,9 @@
             android:id="@+id/action_detailsOrder2_to_serve"
             app:destination="@id/serve" />
     </fragment>
+    <fragment
+        android:id="@+id/hisDetailOrdered"
+        android:name="com.example.orderapp.view.HisDetailOrdered"
+        android:label="fragment_his_detail_ordered"
+        tools:layout="@layout/fragment_his_detail_ordered" />
 </navigation>

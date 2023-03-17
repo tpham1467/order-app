@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.orderapp.view.Signin;
+
 public class FirstActivity extends AppCompatActivity {
 
     @Override
@@ -19,7 +21,7 @@ public class FirstActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(FirstActivity.this, MainActivity.class);
+                Intent intent = new Intent(FirstActivity.this, Signin.class);
                 startActivity(intent);
             }
         });
