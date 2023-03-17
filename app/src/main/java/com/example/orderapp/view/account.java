@@ -66,6 +66,12 @@ public class account extends Fragment {
         EditText editText_Name = view.findViewById(R.id.edit_Name);
         ImageView editDateBirth = view.findViewById(R.id.pen_editDateBirth);
         EditText editText_DateBirth = view.findViewById(R.id.edit_DateBirth);
+        ImageView editPhone = view.findViewById(R.id.pen_editPhoneNumber);
+        EditText editText_Phone = view.findViewById(R.id.edit_phone);
+        ImageView editEmail = view.findViewById(R.id.pen_editEmail);
+        EditText editText_Email = view.findViewById(R.id.edit_Mail);
+        ImageView editIDCard = view.findViewById(R.id.pen_editIDCard);
+        EditText editText_IDCard= view.findViewById(R.id.edit_IDCard);
 
 
         editName.setOnClickListener(new View.OnClickListener() {
@@ -113,6 +119,69 @@ public class account extends Fragment {
         });
 
         //edit Phone number
+        editPhone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // Nếu EditText không được kích hoạt, kích hoạt nó và thay đổi văn bản của Button
+                if (!editText_Phone.isEnabled()) {
+                    editText_Phone.setEnabled(true);
+                    editText_Phone.setBackgroundColor(Color.parseColor("#f09e98"));
+
+                    //button.setText("Lưu");
+                }
+                // Ngược lại, vô hiệu hóa EditText và đặt lại văn bản của Button
+                else {
+                    editText_Phone.setEnabled(false);
+                    //button.setText("Chỉnh sửa");
+                    editText_Phone.setBackgroundColor(Color.parseColor("#f5c3c0"));
+                }
+
+            }
+        });
+        //edit Email
+        editEmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // Nếu EditText không được kích hoạt, kích hoạt nó và thay đổi văn bản của Button
+                if (!editText_Email.isEnabled()) {
+                    editText_Email.setEnabled(true);
+                    editText_Email.setBackgroundColor(Color.parseColor("#f09e98"));
+
+                    //button.setText("Lưu");
+                }
+                // Ngược lại, vô hiệu hóa EditText và đặt lại văn bản của Button
+                else {
+                    editText_Email.setEnabled(false);
+                    //button.setText("Chỉnh sửa");
+                    editText_Email.setBackgroundColor(Color.parseColor("#f5c3c0"));
+                }
+
+            }
+        });
+        //edit ID_card
+
+        editIDCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // Nếu EditText không được kích hoạt, kích hoạt nó và thay đổi văn bản của Button
+                if (!editText_IDCard.isEnabled()) {
+                    editText_IDCard.setEnabled(true);
+                    editText_IDCard.setBackgroundColor(Color.parseColor("#f09e98"));
+
+                    //button.setText("Lưu");
+                }
+                // Ngược lại, vô hiệu hóa EditText và đặt lại văn bản của Button
+                else {
+                    editText_IDCard.setEnabled(false);
+                    //button.setText("Chỉnh sửa");
+                    editText_IDCard.setBackgroundColor(Color.parseColor("#f5c3c0"));
+                }
+
+            }
+        });
 
 
     }
