@@ -423,10 +423,10 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="70dp"
-        android:background="#ffff"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:background="#F8E3D7"
         app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
@@ -524,7 +524,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#fff"
                 android:paddingTop="5dp"
                 app:srcCompat="@drawable/baseline_account_circle_24" />
 
