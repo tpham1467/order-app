@@ -102,9 +102,9 @@ public class HisDetailOrdered extends Fragment {
     private List<foodItem> getListItem(){
         List<foodItem> list = new ArrayList<>();
         list.add(new foodItem("Hamperger","15.93","Carrot, rise, broccoli, paprica",true));
-        list.add(new foodItem("Hamperger","15.93","Carrot, rise, broccoli, paprica",false));
         list.add(new foodItem("Hamperger","15.93","Carrot, rise, broccoli, paprica",true));
-        list.add(new foodItem("Hamperger","15.93","Carrot, rise, broccoli, paprica",false));
+        list.add(new foodItem("Hamperger","15.93","Carrot, rise, broccoli, paprica",true));
+        list.add(new foodItem("Hamperger","15.93","Carrot, rise, broccoli, paprica",true));
         list.add(new foodItem("Hamperger","15.93","Carrot, rise, broccoli, paprica",true));
         list.add(new foodItem("Hamperger","15.93","Carrot, rise, broccoli, paprica",true));
         list.add(new foodItem("Hamperger","15.93","Carrot, rise, broccoli, paprica",true));
