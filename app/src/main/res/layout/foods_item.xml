@@ -7,6 +7,7 @@
     app:cardCornerRadius="16dp"
     app:cardElevation="4dp"
     app:cardUseCompatPadding="true"
+    android:id="@+id/ll_fooditem"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
