@@ -68,7 +68,7 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/my_image_view4"
+                        android:id="@+id/img_plus"
                         android:layout_width="18dp"
                         android:layout_height="26dp"
                         android:layout_marginStart="5dp"
@@ -81,7 +81,7 @@
                         tools:ignore="MissingConstraints" />
 
                     <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/my_image_view5"
+                        android:id="@+id/img_minus"
                         android:layout_width="18dp"
                         android:layout_height="26dp"
                         android:layout_marginStart="68dp"
@@ -95,17 +95,18 @@
 
                     <TextView
                         android:id="@+id/txt_number_of_dishes"
-                        android:layout_width="10dp"
-                        android:layout_height="22dp"
+                        android:layout_width="40dp"
+                        android:layout_height="25dp"
                         android:fontFamily="sans-serif-black"
                         android:text="1"
+                        android:gravity="center"
                         android:textColor="#000"
                         android:textSize="20sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.111" />
+                        app:layout_constraintVertical_bias="0.4" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </LinearLayout>

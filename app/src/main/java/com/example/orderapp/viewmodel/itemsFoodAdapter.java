@@ -13,6 +13,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -80,10 +81,31 @@ public class itemsFoodAdapter extends RecyclerView.Adapter<itemsFoodAdapter.View
                 } else{
                     dialog.setCancelable(false);
                 }
-
-                //EditText edtFeedback = dialog.findViewById(R.id.edt_feedback);
                 Button btnNoThanks = dialog.findViewById(R.id.btn_no_thanks);
                 Button btnSend = dialog.findViewById(R.id.btn_send);
+                ImageView imageView_plus = dialog.findViewById(R.id.img_plus);
+                ImageView imageView_minus = dialog.findViewById(R.id.img_minus);
+                TextView number_of_dishes = dialog.findViewById(R.id.txt_number_of_dishes);
+                imageView_plus.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        int currentValue = Integer.parseInt(number_of_dishes.getText().toString());
+                        int newValue = currentValue + 1;
+                        number_of_dishes.setText(Integer.toString(newValue));
+                    }
+                });
+
+
+                imageView_minus.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        int currentValue = Integer.parseInt(number_of_dishes.getText().toString());
+                        if (currentValue > 0) {
+                            int newValue = currentValue - 1;
+                            number_of_dishes.setText(Integer.toString(newValue));
+                        }
+                    }
+                });
 
                 btnNoThanks.setOnClickListener(new View.OnClickListener() {
 
@@ -97,7 +119,7 @@ public class itemsFoodAdapter extends RecyclerView.Adapter<itemsFoodAdapter.View
 
                     @Override
                     public void onClick(View v) {
-                        //Toast.makeText(context,"Send feedback", Toast.LENGTH_SHORT).show();
+
                     }
                 });
                 dialog.show();
