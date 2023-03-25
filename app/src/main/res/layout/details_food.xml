@@ -75,6 +75,7 @@
                 android:gravity="center"
                 android:text="12,94"
                 android:textColor="@color/black" />
+
         </LinearLayout>
         <TextView
             android:id="@+id/tv_statusserve"
@@ -87,4 +88,16 @@
             android:textColor="@color/black" />
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/im_remove"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="-10dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
+        app:srcCompat="@drawable/delicon" />
+
 </LinearLayout>

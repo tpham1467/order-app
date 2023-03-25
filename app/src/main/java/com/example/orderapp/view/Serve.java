@@ -79,17 +79,17 @@ public class Serve extends Fragment {
 
             private List<tableItem> getListItem() {
                 List<tableItem> list = new ArrayList<>();
-                list.add(new tableItem("Table 1", true, 4, 5, "145,95"));
-                list.add(new tableItem("Table 2", false, 2, 5, "145,95"));
-                list.add(new tableItem("Table 3", true, 4, 5, "145,95"));
-                list.add(new tableItem("Table 4", false, 4, 5, "145,95"));
-                list.add(new tableItem("Table 5", false, 4, 5, "145,95"));
-                list.add(new tableItem("Table 6", true, 4, 5, "145,95"));
-                list.add(new tableItem("Table 7", false, 4, 5, "145,95"));
-                list.add(new tableItem("Table 8", true, 4, 5, "145,95"));
-                list.add(new tableItem("Table 9", false, 4, 5, "145,95"));
-                list.add(new tableItem("Table 10", true, 4, 5, "145,95"));
-                list.add(new tableItem("Table 11", true, 4, 5, "145,95"));
+                list.add(new tableItem("Table 1", 1, 4, 5, "145,95"));
+                list.add(new tableItem("Table 2", 0, 2, 5, "145,95"));
+                list.add(new tableItem("Table 3", 2, 4, 5, "145,95"));
+                list.add(new tableItem("Table 4", 1, 4, 5, "145,95"));
+                list.add(new tableItem("Table 5", 2, 4, 5, "145,95"));
+                list.add(new tableItem("Table 6", 3, 4, 5, "145,95"));
+                list.add(new tableItem("Table 7", 2, 4, 5, "145,95"));
+                list.add(new tableItem("Table 8", 1, 4, 5, "145,95"));
+                list.add(new tableItem("Table 9", 0, 4, 5, "145,95"));
+                list.add(new tableItem("Table 10", 0, 4, 5, "145,95"));
+                list.add(new tableItem("Table 11", 2, 4, 5, "145,95"));
                 return list;
             }
 

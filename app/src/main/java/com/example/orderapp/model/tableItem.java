@@ -2,7 +2,7 @@ package com.example.orderapp.model;
 
 public class tableItem {
     private String nameTable;
-    private boolean status;
+    private int status;
     private int numServed;
     private int totalServe;
 
@@ -24,11 +24,11 @@ public class tableItem {
         this.nameTable = nameTable;
     }
 
-    public boolean isStatus() {
+    public int isStatus() {
         return status;
     }
 
-    public void setStatus(boolean status) {
+    public void setStatus(int status) {
         this.status = status;
     }
 
@@ -51,7 +51,7 @@ public class tableItem {
     public tableItem() {
     }
 
-    public tableItem(String nameTable, boolean status, int numServed, int totalServe, String total) {
+    public tableItem(String nameTable, int status, int numServed, int totalServe, String total) {
         this.nameTable = nameTable;
         this.status = status;
         this.numServed = numServed;

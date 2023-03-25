@@ -90,13 +90,13 @@ public class HisDetailOrdered extends Fragment {
                 Navigation.findNavController(view).navigate(R.id.account, savedInstanceState);
             }
         });
-//        navAcc.setOnClickListener(new View.OnClickListener() {
+//        navAccount = view.findViewById(R.id.nav_account);
+//        navAccount.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
-//                Navigation.findNavController(view).navigate(R.id.nav_account, savedInstanceState);
+//                Navigation.findNavController(view).navigate(R.id.account, savedInstanceState);
 //            }
 //        });
-
     }
 
     private List<foodItem> getListItem(){

@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -47,11 +48,14 @@ public class tablesAdapter extends RecyclerView.Adapter<tablesAdapter.ViewHolder
         tableItem tables = tableItems.get(position);
 
         holder.tvNameTable.setText(tables.getNameTable().toString());
-        if(tables.isStatus()){
-            holder.tvStatus.setText("Served");
+        if(tables.isStatus()==0){
+            holder.tvStatus.setText("Opening");
+        }
+        else if(tables.isStatus()==1){
+            holder.tvStatus.setText("Serving");
         }
         else{
-            holder.tvStatus.setText("Serving");
+            holder.tvStatus.setText("Served");
         }
         holder.tvNumServed.setText(Integer.toString(tables.getNumServed()));
         holder.tvTotalServe.setText(Integer.toString(tables.getTotalServe()));
@@ -82,6 +86,7 @@ public class tablesAdapter extends RecyclerView.Adapter<tablesAdapter.ViewHolder
         private TextView tvTotalServe;
         private TextView tvCostFoods;
         private LinearLayout llTableItem;
+        private Switch swStatus;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -92,6 +97,7 @@ public class tablesAdapter extends RecyclerView.Adapter<tablesAdapter.ViewHolder
             tvTotalServe = itemView.findViewById(R.id.tv_totalserve);
             tvCostFoods = itemView.findViewById(R.id.tv_totalcostfood);
             llTableItem = itemView.findViewById(R.id.ll_tableitem);
+            swStatus = itemView.findViewById(R.id.swStatus);
         }
     }
 
