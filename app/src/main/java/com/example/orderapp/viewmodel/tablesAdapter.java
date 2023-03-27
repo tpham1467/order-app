@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -25,6 +26,7 @@ public class tablesAdapter extends RecyclerView.Adapter<tablesAdapter.ViewHolder
 
     private Context context;
     List<tableItem> tableItems;
+    List<tableItem> tableItemsOpening;
 
     public tablesAdapter(Context context) {
         this.context = context;
@@ -98,6 +100,17 @@ public class tablesAdapter extends RecyclerView.Adapter<tablesAdapter.ViewHolder
             tvCostFoods = itemView.findViewById(R.id.tv_totalcostfood);
             llTableItem = itemView.findViewById(R.id.ll_tableitem);
             swStatus = itemView.findViewById(R.id.swStatus);
+
+            swStatus.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+
+                    } else {
+                        // Xử lý khi switch được chuyển sang trạng thái tắt
+                    }
+                }
+            });
         }
     }
 

@@ -1,8 +1,11 @@
 package com.example.orderapp.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -11,10 +14,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+
+import com.example.orderapp.FirstActivity;
 import com.example.orderapp.R;
 import com.example.orderapp.viewmodel.itemsFoodAdapter;
 import com.example.orderapp.model.foodItem;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +35,9 @@ public class home extends Fragment {
     private LinearLayout navAcc;
     private LinearLayout navHome;
     private LinearLayout navAccount;
+    private ImageView ivSideMenu;
+    private DrawerLayout drawerLayout;
+    private FloatingActionButton flbtnLogout;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -83,6 +93,25 @@ public class home extends Fragment {
             @Override
             public void onClick(View view) {
                 Navigation.findNavController(view).navigate(R.id.account, savedInstanceState);
+            }
+        });
+
+        drawerLayout = view.findViewById(R.id.drawerLayout);
+        ivSideMenu = view.findViewById(R.id.iv_sidemenu);
+        ivSideMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                drawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
+
+        flbtnLogout = view.findViewById(R.id.flbtn_logout);
+        flbtnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), FirstActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
             }
         });
     }

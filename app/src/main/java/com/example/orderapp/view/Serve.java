@@ -68,13 +68,13 @@ public class Serve extends Fragment {
                 Navigation.findNavController(view).navigate(R.id.home_nav, savedInstanceState);
             }
         });
-//        navAccount = view.findViewById(R.id.nav_account);
-//        navAccount.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Navigation.findNavController(view).navigate(R.id.account, savedInstanceState);
-//            }
-//        });
+        navAccount = view.findViewById(R.id.nav_account);
+        navAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.account, savedInstanceState);
+            }
+        });
     }
 
             public List<tableItem> getListItem() {

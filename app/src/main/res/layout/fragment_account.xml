@@ -421,12 +421,15 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout6"
         android:layout_width="0dp"
         android:layout_height="70dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="#F8E3D7"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:background="#F8E3D7"
         app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
@@ -437,12 +440,12 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/imageView17"
+                android:id="@+id/imageView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingTop="5dp"
-                app:srcCompat="@drawable/ic_baseline_home_ser" />
+                android:src="@drawable/ic_baseline_home_ser" />
 
             <TextView
                 android:id="@+id/textView18"
@@ -467,7 +470,7 @@
             <ImageView
                 android:id="@+id/imageView18"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="19dp"
                 android:layout_weight="1"
                 android:paddingTop="5dp"
                 app:srcCompat="@drawable/ic_baseline_local_grocery_store_24" />
@@ -494,8 +497,7 @@
             <ImageView
                 android:id="@+id/imageView19"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-
+                android:layout_height="35dp"
                 android:layout_weight="1"
                 android:paddingTop="5dp"
                 app:srcCompat="@drawable/ic_baseline_restore_24" />
@@ -503,7 +505,7 @@
             <TextView
                 android:id="@+id/textView20"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/abril_fatface"
                 android:gravity="center"
@@ -513,7 +515,6 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/nav_account"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -522,21 +523,20 @@
             <ImageView
                 android:id="@+id/imageView20"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="19dp"
                 android:layout_weight="1"
                 android:paddingTop="5dp"
                 app:srcCompat="@drawable/baseline_account_circle_24" />
 
             <TextView
                 android:id="@+id/textView21"
-                android:layout_width="91dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/border_bottom"
                 android:layout_weight="1"
                 android:fontFamily="@font/abril_fatface"
                 android:gravity="center"
                 android:text="Account"
-                android:textColor="@color/black"
+                android:textColor="#ff3131"
                 android:textSize="14sp" />
         </LinearLayout>
     </LinearLayout>
@@ -544,12 +544,11 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="122dp"
         android:layout_height="53dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
         android:background="@drawable/edittext_border_pink"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.946"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <TextView
             android:id="@+id/textView9"
