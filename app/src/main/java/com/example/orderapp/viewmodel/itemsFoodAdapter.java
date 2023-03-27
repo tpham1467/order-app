@@ -11,9 +11,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.example.orderapp.view.Serve;
@@ -23,13 +25,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.orderapp.R;
 import com.example.orderapp.model.foodItem;
+import com.example.orderapp.model.tableItem;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class itemsFoodAdapter extends RecyclerView.Adapter<itemsFoodAdapter.ViewHolder> {
 
     private Context context;
     List<foodItem> foodItems;
+    private Spinner spTable;
 
     public itemsFoodAdapter(Context context) {
         this.context = context;
@@ -53,13 +59,7 @@ public class itemsFoodAdapter extends RecyclerView.Adapter<itemsFoodAdapter.View
         foodItem foodItem = foodItems.get(position);
         holder.tvTitle.setText(foodItem.getTitle());
         holder.tvCost.setText((String) foodItem.getCost());
-        Serve getlistTable= new Serve();
-//        List<String> tableNameList = new ArrayList<>(); // Danh sách mới chứa các thuộc tính name
-//
-//        for (tableItem table : getlistTable.) {
-//            String tableName = table.getName(); // Trích xuất thuộc tính name từ mỗi phần tử trong danh sách table
-//            tableNameList.add(tableName); // Thêm thuộc tính name vào danh sách mới
-//        }
+
 
 
 
@@ -132,6 +132,17 @@ public class itemsFoodAdapter extends RecyclerView.Adapter<itemsFoodAdapter.View
 
                     }
                 });
+                //Lấy list table
+                Serve getlistTable= new Serve();
+                ArrayList<String> tableNameList = new ArrayList<>();
+
+                for (tableItem table : getlistTable.getListItem()) {
+                    String tableName = table.getNameTable();
+                    tableNameList.add(tableName);
+                }
+                ArrayAdapter<String> arrayAdapter_Table = new ArrayAdapter<>(context.getApplicationContext(),R.layout.style_spinner,tableNameList);
+                spTable = dialog.findViewById(R.id.List_table);
+                spTable.setAdapter(arrayAdapter_Table);
                 dialog.show();
             }
         });

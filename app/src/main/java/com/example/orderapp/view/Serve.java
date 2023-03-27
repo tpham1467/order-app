@@ -23,7 +23,7 @@ import java.util.List;
 
 public class Serve extends Fragment {
     private RecyclerView recyclerAllTable;
-    private tablesAdapter tablesAdap;
+    public tablesAdapter tablesAdap;
     private LinearLayout navHome;
     private LinearLayout navHis;
     private LinearLayout navAccount;
@@ -77,7 +77,7 @@ public class Serve extends Fragment {
 //        });
     }
 
-            private List<tableItem> getListItem() {
+            public List<tableItem> getListItem() {
                 List<tableItem> list = new ArrayList<>();
                 list.add(new tableItem("Table 1", 1, 4, 5, "145,95"));
                 list.add(new tableItem("Table 2", 0, 2, 5, "145,95"));
