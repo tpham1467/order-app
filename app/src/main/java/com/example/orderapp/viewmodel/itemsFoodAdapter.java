@@ -16,6 +16,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.example.orderapp.view.Serve;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -52,6 +53,15 @@ public class itemsFoodAdapter extends RecyclerView.Adapter<itemsFoodAdapter.View
         foodItem foodItem = foodItems.get(position);
         holder.tvTitle.setText(foodItem.getTitle());
         holder.tvCost.setText((String) foodItem.getCost());
+        Serve getlistTable= new Serve();
+//        List<String> tableNameList = new ArrayList<>(); // Danh sách mới chứa các thuộc tính name
+//
+//        for (tableItem table : getlistTable.) {
+//            String tableName = table.getName(); // Trích xuất thuộc tính name từ mỗi phần tử trong danh sách table
+//            tableNameList.add(tableName); // Thêm thuộc tính name vào danh sách mới
+//        }
+
+
 
         holder.itemView.findViewById(R.id.ll_fooditem).setOnClickListener(new View.OnClickListener() {
             @Override
