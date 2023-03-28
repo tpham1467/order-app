@@ -99,10 +99,10 @@
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="20dp"
         android:alpha="0.8"
-        android:backgroundTint="@color/red"
+        android:backgroundTint="#B14A4A"
         android:fontFamily="@font/abril_fatface"
         android:text="Delete"
-        android:textColor="@color/material_dynamic_neutral0"
+        android:textColor="#000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
@@ -113,13 +113,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
         android:alpha="0.8"
-        android:backgroundTint="@color/teal_200"
+        android:backgroundTint="#FF03DAC5"
         android:fontFamily="@font/abril_fatface"
         android:text="Cancel"
-        android:textColor="@color/material_dynamic_neutral0"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="#000"
         app:layout_constraintEnd_toStartOf="@+id/btn_del"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
 
