@@ -99,18 +99,18 @@ public class tablesAdapter extends RecyclerView.Adapter<tablesAdapter.ViewHolder
             tvTotalServe = itemView.findViewById(R.id.tv_totalserve);
             tvCostFoods = itemView.findViewById(R.id.tv_totalcostfood);
             llTableItem = itemView.findViewById(R.id.ll_tableitem);
-            swStatus = itemView.findViewById(R.id.swStatus);
+//            swStatus = itemView.findViewById(R.id.swStatus);
 
-            swStatus.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    if (isChecked) {
-
-                    } else {
-                        // Xử lý khi switch được chuyển sang trạng thái tắt
-                    }
-                }
-            });
+//            swStatus.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//                @Override
+//                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+//                    if (isChecked) {
+//
+//                    } else {
+//                        // Xử lý khi switch được chuyển sang trạng thái tắt
+//                    }
+//                }
+//            });
         }
     }
 
