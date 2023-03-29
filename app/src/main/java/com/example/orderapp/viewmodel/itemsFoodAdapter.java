@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -66,10 +67,10 @@ public class itemsFoodAdapter extends RecyclerView.Adapter<itemsFoodAdapter.View
         holder.itemView.findViewById(R.id.ll_fooditem).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openFeedbackDialog(Gravity.CENTER);
+                openDialog(Gravity.CENTER);
             }
 
-            private void openFeedbackDialog(int gravity){
+            private void openDialog(int gravity){
                 final Dialog dialog = new Dialog (context);
                 dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                 dialog.setContentView(R.layout.layout_dialog_add_food_for_table);
@@ -91,7 +92,7 @@ public class itemsFoodAdapter extends RecyclerView.Adapter<itemsFoodAdapter.View
                 } else{
                     dialog.setCancelable(false);
                 }
-                Button btnNoThanks = dialog.findViewById(R.id.btn_no_thanks);
+                Button btnCancel = dialog.findViewById(R.id.btn_no_thanks);
                 Button btnSend = dialog.findViewById(R.id.btn_send);
                 ImageView imageView_plus = dialog.findViewById(R.id.img_plus);
                 ImageView imageView_minus = dialog.findViewById(R.id.img_minus);
@@ -117,7 +118,7 @@ public class itemsFoodAdapter extends RecyclerView.Adapter<itemsFoodAdapter.View
                     }
                 });
 
-                btnNoThanks.setOnClickListener(new View.OnClickListener() {
+                btnCancel.setOnClickListener(new View.OnClickListener() {
 
                     @Override
                     public void onClick(View v) {
@@ -128,7 +129,8 @@ public class itemsFoodAdapter extends RecyclerView.Adapter<itemsFoodAdapter.View
                 btnSend.setOnClickListener(new View.OnClickListener() {
 
                     @Override
-                    public void onClick(View v) {
+                    public void onClick(View v)
+                    {
 
                     }
                 });
@@ -140,9 +142,25 @@ public class itemsFoodAdapter extends RecyclerView.Adapter<itemsFoodAdapter.View
                     String tableName = table.getNameTable();
                     tableNameList.add(tableName);
                 }
-                ArrayAdapter<String> arrayAdapter_Table = new ArrayAdapter<>(context.getApplicationContext(),R.layout.style_spinner,tableNameList);
+                ArrayAdapter<String> arrayAdapter_Table = new ArrayAdapter<>(context.getApplicationContext(),R.layout.style_spinner_layout_add_food_for_table,tableNameList);
+                arrayAdapter_Table.setDropDownViewResource(R.layout.style_spinner_layout_add_food_for_table);
                 spTable = dialog.findViewById(R.id.List_table);
                 spTable.setAdapter(arrayAdapter_Table);
+
+                spTable.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        int selectedPosition = position;
+                        spTable.setSelection(selectedPosition);
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+                        // Do nothing
+                    }
+                });
+
+
                 dialog.show();
             }
         });
